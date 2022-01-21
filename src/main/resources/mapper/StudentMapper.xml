@@ -9,8 +9,11 @@
   <sql id="Base_Column_List">
     id, stu_name, stu_age
   </sql>
+  <select id="selectAll">
+    select * from t_student
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
+    select
     <include refid="Base_Column_List" />
     from t_student
     where id = #{id,jdbcType=INTEGER}
